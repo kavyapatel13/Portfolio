@@ -7,25 +7,26 @@ import {
 
 import { motion } from "framer-motion";
 import profile from "../assets/profile.jpeg";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
     <section
       id="home"
-      className="flex min-h-screen items-center px-6 pt-28"
+      className="flex min-h-screen items-center px-4 pt-32 sm:px-6"
     >
-      <div className="mx-auto grid max-w-7xl items-center gap-10 md:grid-cols-2">
+      <div className="mx-auto grid max-w-7xl items-center gap-10 text-center md:grid-cols-2 md:text-left">
         <motion.div
           // initial={{ opacity: 0, x: -40 }}
           // animate={{ opacity: 1, x: 0 }}
         >
           <p className="text-2xl text-blue-400">Hello, I'm</p>
 
-          <h1 className="mt-4 text-6xl font-extrabold md:text-8xl">
+          <h1 className="mt-4 text-4xl font-extrabold sm:text-5xl md:text-7xl lg:text-8xl">
             Kavya Patel
           </h1>
 
-          <h2 className="mt-4 text-3xl font-semibold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
+          <h2 className="mt-4 text-xl font-semibold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent sm:text-2xl md:text-3xl">
             React Developer & UI Designer
           </h2>
 
@@ -35,16 +36,14 @@ function Home() {
           </p>
 
           <div className="mt-10 flex flex-wrap gap-5">
-            <a
-              href="/contact"
+            <Link to="/contact">
               className="flex items-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 px-8 py-4 font-semibold"
-            >
+            </Link>
               Hire Me <FaArrowRight />
-            </a>
 
           </div>
 
-          <div className="mt-10 flex gap-4">
+          <div className="mt-10 flex justify-center gap-4 md:justify-start">
             <a
               href="https://github.com/kavyapatel13"
               target="_blank"
@@ -72,7 +71,7 @@ function Home() {
           <div className="relative">
             <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 blur-2xl" />
 
-            <div className="relative h-96 w-96 rounded-full border-4 border-blue-500 p-2">
+            <div className="relative h-64 w-64 sm:h-80 sm:w-80 md:h-96 md:w-96 rounded-full border-4 border-blue-500 p-2">
               <img
                 src={profile}
                 alt="profile"
