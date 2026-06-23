@@ -37,9 +37,7 @@ function Home() {
 
           <div className="mt-10 flex flex-wrap gap-5">
             <Link to="/contact">
-              className="flex items-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 px-8 py-4 font-semibold"
             </Link>
-              Hire Me <FaArrowRight />
 
           </div>
 
